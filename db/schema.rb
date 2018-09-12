@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 2018_09_12_142810) do
     t.string "y"
     t.string "strokeWidth"
     t.string "strokeColor"
-    t.integer "user_id"
-    t.integer "paint_room_id"
+    # t.integer "user_id"
+    # t.integer "paint_room_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
