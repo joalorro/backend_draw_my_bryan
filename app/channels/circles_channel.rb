@@ -10,7 +10,8 @@ class CirclesChannel < ApplicationCable::Channel
 
   def send_circle data
     puts "receiving"
-    Circle.create(x: data.x, y: data.y , strokeWidth: data.strokeWidth ,strokeColor: data.strokeColor)
+    puts data['x']
+    Circle.create(x: data['x'], y: data['y'] , strokeWidth: data['strokeWidth'] ,strokeColor: data['strokeColor'])
     ActionCable.server.broadcast('circles_channel',
       x: data['x'],
       y: data['y'],
