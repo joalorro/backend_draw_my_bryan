@@ -5,9 +5,9 @@ class CreateCircles < ActiveRecord::Migration[5.2]
       t.string :y
       t.string :strokeWidth
       t.string :strokeColor
-      t.integer :user_id 
-      t.integer :paint_room_id
 
+      t.integer :paint_room_id
+      t.string :username
       t.timestamps
     end
   end
