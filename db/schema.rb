@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_12_142810) do
+ActiveRecord::Schema.define(version: 2018_09_13_191521) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,14 +20,21 @@ ActiveRecord::Schema.define(version: 2018_09_12_142810) do
     t.string "y"
     t.string "strokeWidth"
     t.string "strokeColor"
-    t.integer "user_id"
     t.integer "paint_room_id"
+    t.string "username"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "keywords", force: :cascade do |t|
     t.string "word"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string "content"
+    t.string "username"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

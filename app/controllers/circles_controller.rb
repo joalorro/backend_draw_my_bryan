@@ -1,27 +1,27 @@
-class CirclesController < ApplicationController 
-    def index 
-        @circles = Circle.all 
+class CirclesController < ApplicationController
+    def index
+        @circles = Circle.all
         render json: @circles
     end
 
-    def show 
+    def show
         @circle = Circle.find params[:id]
-        render json: @circle 
-    end 
+        render json: @circle
+    end
 
-    def create 
-        @circle = Circle.new circle_params 
+    def create
+        @circle = Circle.new circle_params
 
-        if @circle.save 
-            render json: @circle, status: :created, location: @circle 
-        else 
+        if @circle.save
+            render json: @circle, status: :created, location: @circle
+        else
             render json: @circle.errors, status: 422
-        end 
-    end 
+        end
+    end
 
-    private 
+    private
 
         def circle_params
-            params.require(:circle).permit(:x,:y,:strokeWidth,:strokeColor)
-        end 
-end 
+            params.require(:circle).permit(:x,:y,:strokeWidth,:strokeColor, :username)
+        end
+end
