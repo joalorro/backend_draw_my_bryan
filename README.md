@@ -1,5 +1,9 @@
 # Draw With Me (server)
 
+Draw With Me is an app that provides a canvas for users to collaboratively draw together. It utilizes ActionCable to drive the real-time updates within the canvas and chat feature.
+
+### Prerequisites 
+
 Before running, be sure to have the following installed and running:
 * Ruby version: 2.3.3 (or greater)
 * [PostgreSQL](https://www.postgresql.org/) database software 
