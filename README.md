@@ -1,24 +1,20 @@
-# README
+# Draw With Me (server)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Before running, be sure to have the following installed and running:
+* Ruby version: 2.3.3 (or greater)
+* [PostgreSQL](https://www.postgresql.org/) database software 
 
-Things you may want to cover:
+### Installation 
 
-* Ruby version
+Run the following from your terminal in the root directory of this repo:
 
-* System dependencies
+```
+bundle install
+rake db:setup
+rake db:migrate
+rails s
+```
 
-* Configuration
+### Precautions
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This server was made without using redis or other temporary servers. Be sure to clear the database often (with rake db:reset ), to prevent storing too much information on the database and your local computer.
